@@ -1,38 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.App {
+  /* background-color: #282c34; */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
-.App-link {
-  color: #61dafb;
+.form {
+  margin: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: black;
+  text-align: left;
+  font-size: 1rem;
+  height: 20rem;
+  width: 20rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.form > * {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.form > input {
+  border-radius: 0.25rem;
+
+  background-color: snow;
+  border: 1rem 1rem black;
+}
+
+.form > input:focus {
+  border-color: green;
+  background: rgb(202, 200, 200);
+}
+
+.form > button {
+  margin-top: 1rem;
+  border-radius: 0.2rem;
+  border-color: antiquewhite;
+  outline: none;
+  cursor: pointer;
+  width: 7rem;
+  transition: background 0.5s ease;
+}
+
+.form > button:hover {
+  background: rgb(12, 155, 88);
+}
+
+.invalid {
+  font-size: 1.2rem;
+  color: red;
+  text-align: center;
+}
+
+#login_info {
+  position: absolute;
+  font-size: 2rem;
+  text-align: center;
+  width: 100vw;
+}
+
+@media (max-width: 600px) {
+  .App {
+    flex-direction: column;
   }
 }
